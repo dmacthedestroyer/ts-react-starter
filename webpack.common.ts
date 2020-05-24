@@ -1,11 +1,9 @@
 import path = require('path')
 import ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-import HtmlWebpackPlugin = require('html-webpack-plugin')
 import webpack = require('webpack')
 
 const assetPath = path.resolve(__dirname, './asset')
 const entryPath = path.resolve(__dirname, './src/index.tsx')
-const templatePath = path.resolve(__dirname, './src/index.ejs')
 const outputPath = path.resolve(__dirname, './public')
 
 const commonConfig: webpack.Configuration = {    

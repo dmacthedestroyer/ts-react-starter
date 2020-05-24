@@ -5,9 +5,7 @@ const headerClass = style({
     fontFamily: 'sans-serif',
 })
 
-export const App: React.FC = ({
-    
-}) => {
+export const App: React.FC = () => {
     return (
         <h1 className={headerClass}>Hello, typescript!</h1>
     )
