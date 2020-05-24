@@ -13,6 +13,7 @@ const commonConfig: webpack.Configuration = {
             component: path.resolve(__dirname, 'src/component'),
             util: path.resolve(__dirname, 'src/util'),
             interface: path.resolve(__dirname, 'src/interface'),
+            asset: assetPath,
         }
     },
     module: {
