@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title><%= title %></title>
+        <style>* { box-sizing: border-box; user-select: none; } input { user-select: text }</style>
+        <script crossorigin src="<%= reactSource %>"></script>
+        <script crossorigin src="<%= reactDomSource %>"></script>
+    </head>
+    <body style="height: 100%; overflow: hidden; padding: 0; margin: 0;">
+        <noscript>
+            <p style="color: white; text-align: center; font-family: sans-serif">
+                This application requires JavaScript.
+            </p>
+        </noscript>
+        <div id="app" style="width: 100%; height: 100%; position: absolute;">
+        </div>
+    </body>
+</html>
