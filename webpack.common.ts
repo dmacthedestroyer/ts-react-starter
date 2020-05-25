@@ -1,20 +1,19 @@
 import path = require('path')
 import ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+import TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack = require('webpack')
 
-const assetPath = path.resolve(__dirname, './asset')
 const entryPath = path.resolve(__dirname, './src/index.tsx')
 const outputPath = path.resolve(__dirname, './public')
 
 const commonConfig: webpack.Configuration = {    
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
-        alias: {
-            component: path.resolve(__dirname, 'src/component'),
-            util: path.resolve(__dirname, 'src/util'),
-            interface: path.resolve(__dirname, 'src/interface'),
-            asset: assetPath,
-        }
+        plugins: [
+            new TsConfigPathsPlugin({
+                configFile: path.resolve(__dirname, './tsconfig.json'),
+            }),
+        ],
     },
     module: {
         rules: [{
@@ -32,7 +31,7 @@ const commonConfig: webpack.Configuration = {
             test: /\.css$/,
             use: ['style-loader', 'css-loader'],
         }, {
-            include: [assetPath],
+            include: [path.resolve(__dirname, './asset')],
             test: /\.(png|svg|jpg|jpeg|otf|eot|woff2?|svg|ttf|js|json|webp|ico|webm)$/,
             use: {
                 loader: 'file-loader',

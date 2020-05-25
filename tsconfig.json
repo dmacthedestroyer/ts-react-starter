@@ -1,15 +1,26 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
       "sourceMap": true,
       "strictNullChecks": false,
+      "esModuleInterop": true,
       "target": "es6",
       "lib": ["es2017", "es6", "es5", "dom", "scripthost"],
       "module": "commonjs",
       "jsx": "react",
-      "baseUrl": "src",
-    },
-    "exclude": [
+      "baseUrl": ".",
+      "moduleResolution": "node",
+      "paths": {
+          "@component": ["src/component"],
+          "@hook": ["src/hook"],
+          "@interface": ["src/interface"],
+          "@util": ["src/util"],
+      }
+  },
+  "include": [
+      "src/**/*",
+      "asset/**/*"
+  ],
+  "exclude": [
       "node_modules",
-      "src/scss",
-    ]
-  }
+  ]
+}

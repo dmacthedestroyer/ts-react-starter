@@ -10,7 +10,13 @@ module.exports = {
         'plugin:react/recommended',
     ],
     env: {
-        'browser': true,
-        'node': true,
+        browser: true,
+        node: true,
     },
+    overrides: [{
+        files: ['**/*.tsx'],
+        rules: {
+            'react/prop-types': "off"
+        }
+    }]
 }
