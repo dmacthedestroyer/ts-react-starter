@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --host 0.0.0.0 --port 4444 --config webpack.dev.ts",
-    "build": "webpack --config webpack.prod.ts",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "dev": "webpack-dev-server --host 0.0.0.0 --port 4444 --config conf/webpack.dev.ts",
+    "build": "webpack --config conf/webpack.prod.ts",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.json"
   },
   "dependencies": {
     "react": "^16.13.1",

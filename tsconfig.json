@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
       "sourceMap": true,
-      "strictNullChecks": false,
+      "strictNullChecks": true,
       "esModuleInterop": true,
       "target": "es6",
       "lib": ["es2017", "es6", "es5", "dom", "scripthost"],
@@ -9,16 +9,18 @@
       "jsx": "react",
       "baseUrl": ".",
       "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
       "paths": {
           "@component": ["src/component"],
           "@hook": ["src/hook"],
           "@interface": ["src/interface"],
-          "@util": ["src/util"],
+          "@util": ["src/util"]
       }
   },
   "include": [
-      "src/**/*",
-      "asset/**/*"
+      "./**/*.{ts,tsx,js,jsx,json}",
+      "./tsconfig.json"
   ],
   "exclude": [
       "node_modules",

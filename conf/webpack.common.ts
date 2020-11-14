@@ -1,4 +1,4 @@
-import path = require('path')
+import path from 'path'
 import ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 import TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack = require('webpack')
