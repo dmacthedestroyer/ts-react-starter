@@ -3,15 +3,16 @@ import ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 import TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack = require('webpack')
 
-const entryPath = path.resolve(__dirname, './src/index.tsx')
-const outputPath = path.resolve(__dirname, './public')
+const rootPath = path.resolve(__dirname, '..')
+const entryPath = path.resolve(rootPath, 'src/index.tsx')
+const outputPath = path.resolve(rootPath, './public')
 
 const commonConfig: webpack.Configuration = {    
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
         plugins: [
             new TsConfigPathsPlugin({
-                configFile: path.resolve(__dirname, './tsconfig.json'),
+                configFile: path.resolve(rootPath, './tsconfig.json'),
             }),
         ],
     },
@@ -31,7 +32,7 @@ const commonConfig: webpack.Configuration = {
             test: /\.css$/,
             use: ['style-loader', 'css-loader'],
         }, {
-            include: [path.resolve(__dirname, './asset')],
+            include: [path.resolve(rootPath, './asset')],
             test: /\.(png|svg|jpg|jpeg|otf|eot|woff2?|svg|ttf|js|json|webp|ico|webm)$/,
             use: {
                 loader: 'file-loader',
@@ -54,7 +55,7 @@ const commonConfig: webpack.Configuration = {
     },
     plugins: [
         new ForkTsCheckerWebpackPlugin({
-            tsconfig: path.resolve(__dirname, './tsconfig.json'),
+            tsconfig: path.resolve(rootPath, './tsconfig.json'),
         }),
     ],
 }
