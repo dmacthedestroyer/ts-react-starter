@@ -20,7 +20,20 @@ const commonConfig: webpack.Configuration = {
         rules: [{
             test: /\.tsx?$/,
             exclude: /node_modules/,
-            loader: 'ts-loader',
+            loader: 'swc-loader',
+            options:  {
+              jsc: {
+                parser: {
+                  syntax: "typescript",
+                  dynamicImport: true,
+                  decorators: true,
+                  tsx: true,
+                },
+                "transform": {
+                  "legacyDecorator": true
+                }
+              },
+            },
         }, {
             enforce: 'pre',
             test: /\.js$/,
