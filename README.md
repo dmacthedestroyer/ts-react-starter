@@ -1,0 +1,1 @@
+This is a simple interview prompt project based on [this CodePen](https://codepen.io/flaviocopes/pen/maVPKa), gratefully bootstrapped by [SimpliciTea's Typescript starter](https://github.com/SimpliciTea/ts-react-starter)
