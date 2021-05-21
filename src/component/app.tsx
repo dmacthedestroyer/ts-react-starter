@@ -7,6 +7,12 @@ import './styles.scss'
 // CSS in JS class made with Typestyle
 const headerClass = style({
     fontFamily: 'sans-serif',
+
+    $nest: {
+        '&:hover': {
+            backgroundColor: 'green'
+        }
+    }
 })
 
 export const App: React.FC = () => {
