@@ -1,4 +1,15 @@
-import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { useState } from "react";
 
-ReactDOM.render(<h1>Hello, typescript!</h1>, document.getElementById("app"));
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+};
+
+ReactDOM.render(<Counter />, document.getElementById("app"));
