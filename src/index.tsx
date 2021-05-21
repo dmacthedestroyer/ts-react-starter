@@ -1,12 +1,4 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-import { App } from './component'
-import { RootStore, RootStoreProvider } from './store'
-
-ReactDOM.render(
-    <RootStoreProvider value={new RootStore()}>
-        <App />
-    </RootStoreProvider>,
-    document.getElementById('app')
-)
+ReactDOM.render(<h1>Hello, typescript!</h1>, document.getElementById("app"));
