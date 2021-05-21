@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
       "sourceMap": true,
-      "strictNullChecks": true,
       "esModuleInterop": true,
       "target": "es6",
       "lib": ["es2017", "es6", "es5", "dom", "scripthost"],

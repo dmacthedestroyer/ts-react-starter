@@ -35,24 +35,11 @@ const commonConfig: webpack.Configuration = {
               },
             },
         }, {
-            enforce: 'pre',
-            test: /\.js$/,
-            loader: 'source-map-loader',
-        }, {
             test: /\.scss$/,
             use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
         }, {
             test: /\.css$/,
             use: ['style-loader', 'css-loader'],
-        }, {
-            include: [path.resolve(rootPath, './asset')],
-            test: /\.(png|svg|jpg|jpeg|otf|eot|woff2?|svg|ttf|js|json|webp|ico|webm)$/,
-            use: {
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]',
-                },
-            },
         }]
     },
     externals: {
